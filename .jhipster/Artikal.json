@@ -1,0 +1,30 @@
+{
+    "name": "Artikal",
+    "fields": [
+        {
+            "fieldName": "nazivArtikla",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cena",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "racunStavke",
+            "otherEntityRelationshipName": "artikal",
+            "relationshipName": "racunStavke"
+        }
+    ],
+    "changelogDate": "20190611212307",
+    "entityTableName": "artikal",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
