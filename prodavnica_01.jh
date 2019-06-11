@@ -1,0 +1,43 @@
+entity Artikal {
+	nazivArtikla String
+    cena Double
+}
+
+entity Kupac {
+	nazivKupca String
+}
+
+entity Racun {
+	brojRacuna String,
+}
+
+entity RacunStavke {
+	redniBrojStavke Integer
+    kolicina Integer
+}
+
+entity Adresa {
+	nazivUlice String
+    ptt Long
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Kupac{racun} to Racun,
+}
+
+relationship OneToMany {
+	Racun{racunStavke} to RacunStavke,
+}
+
+relationship OneToMany {
+	Artikal{racunStavke} to RacunStavke,
+}
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+	Kupac{adresa} to Adresa,
+}
+
+// Set service options to all except few
+service all with serviceImpl
