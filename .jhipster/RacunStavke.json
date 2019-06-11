@@ -1,0 +1,36 @@
+{
+    "name": "RacunStavke",
+    "fields": [
+        {
+            "fieldName": "redniBrojStavke",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "kolicina",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "artikal",
+            "otherEntityName": "artikal",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "racun",
+            "otherEntityName": "racun",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190611212310",
+    "entityTableName": "racun_stavke",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
